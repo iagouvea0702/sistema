@@ -1,0 +1,53 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{/each}}
+
+{{#each sucesso}}
+    <div class="alert alert-success">{{text}}</div>
+{{/each}}
+
+
+<style>
+    h1{
+        text-align: center;
+    }
+    button{
+        margin-top: 10px;
+    }
+
+    label{
+        font-weight: 500;
+    }
+
+    input{
+        width: 300px;
+        border-radius: 3px;
+        border-style: solid;
+    }
+
+</style>
+
+<h1>Register your account</h1>
+<section>
+    <form action="/register" method="post">
+        <ul>
+        <li><label for="name">Name: </label></li>
+        <input type="text" name="name" required>
+
+        <li><label for="email">E-mail</label></li>
+        <input type="email" name="email" required>
+
+        <li><label for="username">Username</label></li>
+        <input type="text" name="username">
+
+        <li><label for="password">Password</label></li>
+        <input type="password" name="password">
+
+        <li><label for="password2">Repeat Password</label></li>
+        <input type="password" name="password2"
+
+        <br>
+        <li><button class="btn btn-success" value="submit">Submit</button></li>
+        </ul>
+    </form>
+</section>
